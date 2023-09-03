@@ -1,0 +1,34 @@
+
+body {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #101820;
+  color: #FEE715;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 20%;
+}
+
+header h1 {
+  font-weight: 40;
+  font-size: 6.25rem;
+}
+
+input {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #FEE715;
+  width: 100%;
+  background: #101820;
+  border:  none;
+  outline: none;
+  padding: 0.313rem;
+  border-bottom: 1px solid #FEE715;
+}
+
+::placeholder {
+  color: #FEE715;
+}
