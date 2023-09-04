@@ -2,8 +2,8 @@
 body {
   width: 50%;
   margin: 0 auto;
-  background-color: #101820;
-  color: #FEE715;
+  background-color: #F6F6F2;
+  color: #388087;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -20,15 +20,46 @@ header h1 {
 input {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2rem;
-  color: #FEE715;
+  color: #388087;
   width: 100%;
-  background: #101820;
+  background: #F6F6F2;
   border:  none;
   outline: none;
   padding: 0.313rem;
-  border-bottom: 1px solid #FEE715;
+  border-bottom: 1px solid #6FB3B8;
 }
 
 ::placeholder {
-  color: #FEE715;
+  color: #6FB3B8;
+}
+
+.task {
+  background-color: #C2EDCE;
+  padding: 0.938rem;
+  margin: 0.375rem;
+  overflow-x: hidden;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.task span {
+  color: #388087;
+  font-weight: bolder;
+}
+
+.icon {
+  float: right;
+  margin-right: 1.25rem;
+}
+
+article {
+  display: grid;
+}
+
+.edit-todo {
+  width: 85%;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #6FB3B8;
 }
