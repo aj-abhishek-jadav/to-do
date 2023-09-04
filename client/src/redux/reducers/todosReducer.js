@@ -15,6 +15,8 @@ const todosReducer = (state = [], action) => {
       return state.map(todo => (
         todo._id === action.data._id ? { ...todo, data: action.data.data } : todo
       ))
+      case actionTypes.DELETE_TODO:
+        return state.filter(todo => todo._id !== action.data._id);
     default:
       return [];
   }
