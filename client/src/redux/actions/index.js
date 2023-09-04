@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_NEW_TODO, TOGGLE_TODO, GET_ALL_TODO, UPDATE_TODO } from './type';
+import { ADD_NEW_TODO, TOGGLE_TODO, GET_ALL_TODO, UPDATE_TODO, DELETE_TODO } from './type';
 
 const API_URL = 'http://localhost:3001';
 
@@ -37,7 +37,7 @@ export const toggleTodo = (id) => async (dispatch) => {
       data: resp.data
     })
   } catch (error) {
-    console.log("Error while calling Togge To Do API", error.message);
+    console.log("Error while calling Toggle To Do API", error.message);
   }
 }
 
@@ -50,6 +50,19 @@ export const updateTodo = (id, data) => async (dispatch) => {
       data: resp.data
     })
   } catch (error) {
-    console.log("Error while calling Togge To Do API", error.message);
+    console.log("Error while calling Update To Do API", error.message);
+  }
+}
+
+
+export const deleteTodo = (id) => async (dispatch) => {
+  try {
+    const resp = await axios.delete(`${API_URL}/todos/${id}`)
+    dispatch({
+      type: DELETE_TODO,
+      data: resp.data
+    })
+  } catch (error) {
+    console.log("Error while calling Delete To Do API", error.message);
   }
 }
